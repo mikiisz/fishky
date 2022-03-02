@@ -1,0 +1,32 @@
+.front,
+.back {
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.front {
+    background-color: #eee;
+}
+
+.back {
+    background-color: #cef;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+}
