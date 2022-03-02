@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ReactCardFlip from 'react-card-flip';
 
-function App() {
+function FlipCardDecorator(props) {
     const [flipped, setFlip] = useState(false);
 
     return (
@@ -9,7 +9,7 @@ function App() {
             <div className="front" onClick={() => setFlip(!flipped)}>
                 <div className="middle">
                     <div className="inner">
-                        Rodzina
+                        {props.front}
                     </div>
                 </div>
             </div>
@@ -17,12 +17,23 @@ function App() {
             <div className="back" onClick={() => setFlip(!flipped)}>
                 <div className="middle">
                     <div className="inner">
-                        Family
+                        {props.back}
                     </div>
                 </div>
             </div>
         </ReactCardFlip>
+    )
+}
 
+function App() {
+    return (
+        <div className="outer">
+            <div className="middle">
+                <FlipCardDecorator front="Rodzina" back="Family"/>
+                <button>Znam</button>
+                <button>Nie znam</button>
+            </div>
+        </div>
     )
 }
 
